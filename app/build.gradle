@@ -25,6 +25,11 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    // Adding the dataBinding Constraint here
+    buildFeatures {
+        dataBinding true
+
+    }
 }
 
 dependencies {
