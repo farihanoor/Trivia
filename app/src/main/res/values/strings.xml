@@ -6,4 +6,7 @@
     <string name="false_button">False</string>
     <string name="next_button">Next</string>
     <string name="place_holder">placeHolder</string>
+    <string name="question">Question: </string>
+    <string name="correct_answer">Correct</string>
+    <string name="incorrect_answer">Incorrect</string>
 </resources>
