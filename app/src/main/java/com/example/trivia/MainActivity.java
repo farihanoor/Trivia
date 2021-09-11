@@ -20,6 +20,7 @@ import com.example.trivia.data.AnswerListAsyncResponse;
 import com.example.trivia.data.Repository;
 import com.example.trivia.databinding.ActivityMainBinding;
 import com.example.trivia.model.Question;
+import com.example.trivia.model.Score;
 import com.google.android.material.snackbar.Snackbar;
 
 import org.json.JSONArray;
@@ -29,9 +30,11 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    List<Question> questionList;
     private ActivityMainBinding binding;
     private int currentQuestionIndex = 0;
-    List<Question> questionList;
+    private int scoreCounter = 0;
+    private Score score;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         //binding.
+        score = new Score();
 
         questionList = new Repository().getQuestion(questionArrayList -> {
                     binding.questionTextView.setText(questionArrayList.get(currentQuestionIndex).
